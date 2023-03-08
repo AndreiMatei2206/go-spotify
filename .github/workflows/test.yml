@@ -3,7 +3,7 @@ on:
   push:
     branches:
     - master
-  pull-request:
+  pull_request:
     branches:
     - master
 
@@ -23,6 +23,6 @@ jobs:
       - uses: actions/setup-go@v3
         with:
           go-version: ${{ matrix.go-version }}
-          
+
       - name: Run go test
         run: go test -v -race -coverprofile coverage.out -covermode atomic ./...
